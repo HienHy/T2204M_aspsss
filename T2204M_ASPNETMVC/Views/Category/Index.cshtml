@@ -1,0 +1,70 @@
+﻿
+@model List<T2204M_ASPNETMVC.Entities.Category>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+*@
+@{
+
+    //var categories = ViewBag.Categories
+
+
+}
+
+<title>@ViewData["Title"] Category</title>
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/T2204M_ASPNETMVC.styles.css" asp-append-version="true" />
+
+
+
+
+<h1>List Category :</h1>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Create">Add Category</a>
+<table class="table table-border  ">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Products Count</th>
+            <th ></th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Products.Count</td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {Id =item.Id})
+
+
+
+                    <a href="@Url.ActionLink("Xoa","Delete",new  {Id =item.Id })"
+                       onclick="return confirm('Xac nhan xoa @item.Name ?')"
+                       class="text-danger">Xoa</a>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+
+
+

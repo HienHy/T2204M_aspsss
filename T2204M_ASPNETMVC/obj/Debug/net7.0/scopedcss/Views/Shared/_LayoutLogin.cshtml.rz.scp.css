@@ -1,0 +1,13 @@
+.bg-image-vertical[b-s6me9mhk7u] {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+
+@media (min-width: 1025px) {
+    .h-custom-2[b-s6me9mhk7u] {
+        height: 100%;
+    }
+}
