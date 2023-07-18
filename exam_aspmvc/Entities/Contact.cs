@@ -33,11 +33,11 @@ namespace exam_aspmvc.Entities
         [Required]
         
 
-        public string HireDate { get; set; }
+        public DateTime HireDate { get; set; }
 
         [Required]
 
-        public string Birthday { get; set; }
+        public DateTime Birthday { get; set; }
 
 
 

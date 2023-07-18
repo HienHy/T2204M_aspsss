@@ -28,13 +28,13 @@ namespace exam_aspmvc.Models
         public string GroupName { get; set; }
 
         [Required]
-        public DateOnly HireDate { get; set; }
+        public DateTime HireDate { get; set; }
 
 
 
         [Required]
        
-        public DateOnly Birthday
+        public DateTime Birthday
         {
             get; set;
 
