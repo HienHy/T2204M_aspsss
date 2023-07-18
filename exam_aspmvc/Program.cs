@@ -1,9 +1,22 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+
+
+
+
+var connectionString = builder.Configuration.GetConnectionString("T2204M_exam");
+
+builder.Services.AddDbContext<exam_aspmvc.Entities.DataContext>(
+    options => options.UseSqlServer(connectionString)
+
+    );
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

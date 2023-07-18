@@ -1,8 +1,8 @@
 ﻿@page
-@model T2204M_ASPNETMVC.Models.ProductViewModel
+@model exam_aspmvc.Models.ContactViewModel
 @{}
 
-@using (Html.BeginForm("Create", "Product", FormMethod.Post))
+@using (Html.BeginForm("Create", "Contact", FormMethod.Post))
 {
 
     <div class="mb-3">
@@ -14,9 +14,31 @@
 
 
     <div class="mb-3">
-        @Html.LabelFor(m => m.Price)
-        @Html.TextBoxFor(m => m.Price)
-        @Html.ValidationMessageFor(m => m.Price)
+        @Html.LabelFor(m => m.Number)
+        @Html.TextBoxFor(m => m.Number)
+        @Html.ValidationMessageFor(m => m.Number)
+
+    </div>
+
+    <div class="mb-3">
+
+
+
+        @Html.LabelFor(m => m.GroupName)
+        @Html.TextBoxFor(m => m.GroupName)
+        @Html.ValidationMessageFor(m => m.GroupName)
+
+
+    </div>
+
+    <div class="mb-3">
+
+
+
+        @Html.LabelFor(m => m.HireDate)
+        <input type="date" name="Birthday" />
+        @Html.ValidationMessageFor(m => m.HireDate)
+
 
     </div>
 
@@ -25,11 +47,12 @@
 
 
 
-       
+        @Html.LabelFor(m => m.Birthday)
+        <input type="date" name="Birthday" />
+        @Html.ValidationMessageFor(m => m.Birthday)
+
 
     </div>
-
-
 
 
     <div class="mb-3">

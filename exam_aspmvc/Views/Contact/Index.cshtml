@@ -1,5 +1,5 @@
 ﻿
-@model List<T2204M_ASPNETMVC.Entities.Product>
+@model List<exam_aspmvc.Entities.Contact>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,27 +11,26 @@
 
 }
 
-<title>@ViewData["Title"] Product</title>
+<title>@ViewData["Title"] Contact</title>
 
 
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-<link rel="stylesheet" href="~/T2204M_ASPNETMVC.styles.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/exam_aspmvc.styles.css" asp-append-version="true" />
 
 
 
 
-<h1>List Product :</h1>
+<h1>List Contact :</h1>
 
 
 
 <a class="nav-link text-dark btn btn-primary" asp-area="" asp-controller="Product" asp-action="Create">Add Product</a>
 
-@using (Html.BeginForm("Index", "Product", FormMethod.Get, new { @class = "form-control" }))
+@using (Html.BeginForm("Index", "Contact", FormMethod.Get, new { @class = "form-control" }))
 {
     <div class="form-group">
-        <label>Product name: </label>
-        <input type="Text" class="form-control mx-sm-3" value="@ViewBag.Keyword" name="searchString" placeholder="Enter name product">
+        <input type="Text" class="form-control mx-sm-3" value="@ViewBag.Keyword" name="searchString" placeholder="Enter name contact">
         <button type="submit" class="btn btn-danger" value="Search">Search</button>
     </div>
     <hr />
@@ -42,9 +41,11 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Brand</th>
-            <th scope="col">Category</th>
+            <th scope="col">Number</th>
+            <th scope="col">Group Name</th>
+            <th scope="col">Hire date</th>
+            <th scope="col">Birthday</th>
+
 
 
 
@@ -57,9 +58,9 @@
             <tr>
                 <td>@item.Id</td>
                 <td>@item.Name</td>
-                <td>@item.Price</td>
-                <td>@item.Brand.Name</td>
-                <td>@item.Category.Name</td>
+                <td>@item.Number</td>
+                <td>@item.HireDate</td>
+                <td>@item.Birthday</td>
 
 
             </tr>
