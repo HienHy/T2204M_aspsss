@@ -29,12 +29,12 @@ public class ContactController : Controller
 
 
 
-        var products = _context.Contacts
+        var contacts = _context.Contacts
           
      
             .ToList();
      
-        return View();
+        return View(contacts);
 
 
 
@@ -80,5 +80,5 @@ public class ContactController : Controller
 
 }
 
-}
+
 

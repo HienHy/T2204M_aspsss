@@ -1,44 +1,45 @@
-﻿<Properties StartupConfiguration="{C89CE207-391E-428A-BF76-5A9C43C369E8}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="T2204M_API/DTOs/BrandDTO.cs">
+﻿<Properties StartupConfiguration="{2B9D3DE1-1F6A-44A5-8A86-B54729ECD088}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="T2204M_ASPNETMVC/Controllers/ProductController.cs">
     <Files>
-      <File FileName="T2204M_ASPNETMVC/Program.cs" />
+      <File FileName="exam_aspmvc/Controllers/HomeController.cs" />
+      <File FileName="exam_aspmvc/Controllers/ContactController.cs" Line="83" Column="1" />
+      <File FileName="exam_aspmvc/Program.cs" />
+      <File FileName="exam_aspmvc/Entities/DataContext.cs" Line="12" Column="5" />
+      <File FileName="exam_aspmvc/appsettings.Development.json" />
+      <File FileName="exam_aspmvc/appsettings.json" />
+      <File FileName="T2204M_ASPNETMVC/appsettings.Development.json" />
       <File FileName="T2204M_ASPNETMVC/appsettings.json" />
-      <File FileName="T2204M_API/Properties/launchSettings.json" />
-      <File FileName="T2204M_API/appsettings.Development.json" />
-      <File FileName="T2204M_API/Program.cs" />
-      <File FileName="T2204M_API/WeatherForecast.cs" />
-      <File FileName="T2204M_API/appsettings.json" />
-      <File FileName="T2204M_API/Entities/T2204mApiContext.cs" />
-      <File FileName="T2204M_API/DTOs/CategoryDTO.cs" />
-      <File FileName="T2204M_API/DTOs/ProductDTO.cs" />
-      <File FileName="T2204M_API/Controllers/CategoryController.cs" />
-      <File FileName="T2204M_API/DTOs/BrandDTO.cs" Line="8" Column="41" />
+      <File FileName="T2204M_ASPNETMVC/Program.cs" />
+      <File FileName="T2204M_ASPNETMVC/Entities/DataContext.cs" />
+      <File FileName="exam_aspmvc/Entities/Contact.cs" />
+      <File FileName="T2204M_ASPNETMVC/Controllers/ProductController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="T2204M" expanded="True">
             <Node name="NuGet.Config files" expanded="True" />
-            <Node name="T2204M_API" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="DTOs" expanded="True">
-                <Node name="BrandDTO.cs" selected="True" />
+            <Node name="T2204M_ASPNETMVC" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="ProductController.cs" selected="True" />
               </Node>
               <Node name="Entities" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
-            <Node name="T2204M_ASPNETMVC" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.exam__aspmvc FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.exam__aspmvc PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.T2204M__ASPNETMVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.T2204M__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

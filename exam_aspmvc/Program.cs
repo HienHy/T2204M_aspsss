@@ -11,7 +11,7 @@ var app = builder.Build();
 
 
 
-var connectionString = builder.Configuration.GetConnectionString("T2204M_exam");
+var connectionString = builder.Configuration.GetConnectionString("T2204M");
 
 builder.Services.AddDbContext<exam_aspmvc.Entities.DataContext>(
     options => options.UseSqlServer(connectionString)
