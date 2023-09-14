@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T2204M_API", "T2204M_API\T2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exam_aspmvc", "exam_aspmvc\exam_aspmvc.csproj", "{2B9D3DE1-1F6A-44A5-8A86-B54729ECD088}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXAM_API", "EXAM_API\EXAM_API.csproj", "{1A96A4E8-5F6C-4D81-89E7-2B4B671F8671}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2B9D3DE1-1F6A-44A5-8A86-B54729ECD088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B9D3DE1-1F6A-44A5-8A86-B54729ECD088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B9D3DE1-1F6A-44A5-8A86-B54729ECD088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A96A4E8-5F6C-4D81-89E7-2B4B671F8671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A96A4E8-5F6C-4D81-89E7-2B4B671F8671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A96A4E8-5F6C-4D81-89E7-2B4B671F8671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A96A4E8-5F6C-4D81-89E7-2B4B671F8671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

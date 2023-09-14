@@ -6,6 +6,8 @@ namespace T2204M_API.Entities;
 
 public partial class T2204mApiContext : DbContext
 {
+
+    public static string ConnectionString; 
     public T2204mApiContext()
     {
     }
@@ -21,9 +23,10 @@ public partial class T2204mApiContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source =localhost,1433;Database=T2204M_API;User Id=sa;Password=Password123@jkl#;TrustServerCertificate=true");
+        => optionsBuilder.UseSqlServer(ConnectionString);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -58,6 +61,7 @@ public partial class T2204mApiContext : DbContext
 
             entity.HasIndex(e => e.Name, "UQ__products__737584F6C14FE990").IsUnique();
 
+            entity.Property(e => e.BrandId).HasColumnName("Brand_id");
             entity.Property(e => e.CategoryId).HasColumnName("Category_id");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("date")
@@ -65,16 +69,34 @@ public partial class T2204mApiContext : DbContext
             entity.Property(e => e.Description).HasMaxLength(50);
             entity.Property(e => e.Name).HasMaxLength(100);
             entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
-            entity.Property(e => e.BrandId).HasColumnName("Brand_id");
             entity.Property(e => e.Thumbnail).HasMaxLength(255);
+
+            entity.HasOne(d => d.Brand).WithMany(p => p.Products)
+                .HasForeignKey(d => d.BrandId)
+                .HasConstraintName("FK__products__Brand___5441852A");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
                 .HasConstraintName("FK__products__Catego__534D60F1");
+        });
 
-            entity.HasOne(d => d.Brand).WithMany(p => p.Products)
-                .HasForeignKey(d => d.BrandId)
-                .HasConstraintName("FK__products__Brand__5441852A");
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__users__3214EC07DA9DF5CD");
+
+            entity.ToTable("users");
+
+            entity.HasIndex(e => e.Email, "UQ__users__AB6E6164BAC50EA3").IsUnique();
+
+            entity.Property(e => e.Email)
+                .HasMaxLength(255)
+                .HasColumnName("email");
+            entity.Property(e => e.Fullname)
+                .HasMaxLength(255)
+                .HasColumnName("fullname");
+            entity.Property(e => e.Password)
+                .HasMaxLength(255)
+                .HasColumnName("password");
         });
 
         OnModelCreatingPartial(modelBuilder);

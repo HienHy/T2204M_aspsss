@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using T2204M_API.DTOs;
 using T2204M_API.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,6 +15,7 @@ namespace T2204M_API.Controllers
 
     [ApiController]
     [Route("api/category")]
+    [Authorize(Roles = "user")]
     public class CategoryController : ControllerBase
     {
 
@@ -32,6 +34,7 @@ namespace T2204M_API.Controllers
 
         // GET: /<controller>/
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var categories = _context.Categories.Include(c =>c.Products).ToList();
@@ -70,6 +73,7 @@ namespace T2204M_API.Controllers
 
 
         [HttpPost]
+        [Authorize(Policy ="SuperAdmin")]
         public IActionResult Create(CategoryDTO data)
         {
             if (ModelState.IsValid)
