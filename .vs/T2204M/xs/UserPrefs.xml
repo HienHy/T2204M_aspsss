@@ -1,37 +1,36 @@
-﻿<Properties StartupConfiguration="{C89CE207-391E-428A-BF76-5A9C43C369E8}|https">
+﻿<Properties StartupConfiguration="{1A96A4E8-5F6C-4D81-89E7-2B4B671F8671}|https">
   <MonoDevelop.Ide.ItemProperties.T2204M__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EXAM_API/Program.cs">
+  <MonoDevelop.Ide.ItemProperties.exam__aspmvc PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.EXAM__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.T2204M__ASPNETMVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EXAM_API/Models/ProjectEmployee.cs">
     <Files>
-      <File FileName="T2204M_API/Program.cs" Line="51" Column="1" />
-      <File FileName="EXAM_API/Program.cs" Line="13" Column="1" />
+      <File FileName="EXAM_API/Models/ExamApiContext.cs" Line="1" Column="1" />
+      <File FileName="EXAM_API/Migrations/20230914034652_first.cs" Line="1" Column="1" />
+      <File FileName="EXAM_API/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="EXAM_API/Models/ProjectEmployee.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="T2204M" expanded="True">
             <Node name="EXAM_API" expanded="True">
-              <Node name="DTOs" expanded="True" />
-              <Node name="Entities" expanded="True" />
-            </Node>
-            <Node name="T2204M_API" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
               <Node name="Controllers" expanded="True" />
-              <Node name="Entities" expanded="True" />
+              <Node name="DTOs" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ProjectEmployee.cs" selected="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.T2204M__ASPNETMVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.exam__aspmvc PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.EXAM__API FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
