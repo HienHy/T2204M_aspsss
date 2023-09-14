@@ -37,6 +37,53 @@ namespace EXAM_API.Controllers
 
             return Ok(projects);
         }
+        [HttpGet, Route("get-detail")]
+        async public Task<IActionResult> GetDetail(int? id)
+        {
+            if (id == null)
+            {
+                var projects = _context.Projects.Include(e => e.ProjectEmployees).ThenInclude(e => e.Employees).ToListAsync();
+                return Ok(projects);
+            }
+            var project = await _context.Projects.Include(e => e.ProjectEmployees).ThenInclude(e => e.Employees).Where(e => e.ProjectId.Equals(id)).ToListAsync();
+            if (project == null) return NotFound();
+            return Ok(project);
+        }
+
+
+        [HttpGet, Route("search-by-name")]
+        async public Task<IActionResult> SearchByName(string? name)
+        {
+            var p = await _context.Projects.Where(e => e.ProjectName.Equals(name)).ToListAsync();
+            return Ok(p);
+        }
+
+        [HttpGet, Route("search-by-startdate")]
+        async public Task<IActionResult> SearchByStartDate(DateTime startdate)
+        {
+            if (startdate != null)
+            {
+                var ps = await _context.Projects.Where(e => e.ProjectStartDate.CompareTo(startdate) == 0).ToListAsync();
+                return Ok(ps);
+            }
+
+            var p = await _context.Projects.Where(e => e.ProjectStartDate.CompareTo(DateTime.Now) > 0).ToListAsync();
+            return Ok(p);
+        }
+
+        [HttpGet, Route("search-by-enddate")]
+        async public Task<IActionResult> SearchByEndDate(DateTime enddate)
+        {
+            if (enddate != null)
+            {
+                var ps = await _context.Projects.Where(e => e.ProjectEndDate.CompareTo(enddate) == 0).ToListAsync();
+                return Ok(ps);
+            }
+
+            var p = await _context.Projects.Where(e => e.ProjectEndDate.CompareTo(DateTime.Now) < 0).ToListAsync();
+            return Ok(p);
+        }
+
 
 
 
